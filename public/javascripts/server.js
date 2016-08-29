@@ -41,5 +41,18 @@ module.exports = function (socket, connection) {
             }
         })
     });
+
+
+    //remove comic from DB
+    socket.on('removeComic', function(comicID){
+        const removeComic = 'DELETE FROM BD WHERE bdID = '+comicID;
+        connection.query(removeComic, function(err){
+           if(err){
+               console.log('remove comic MYSQL error : '+err);
+           }else{
+               console.log('removing comic successfully');
+           }
+        });
+    });
     
 };
