@@ -4,16 +4,21 @@
 
 module.exports = function (socket, connection) {
 
+    //client connected
     socket.on('client', function () {
         console.log('client connecté');
     })
 
-
+    //add comic to DB
     socket.on('addComic', function(data){
         console.log(data.collection);
         console.log('addComic data received');
         const number = parseInt(data.number);
-        const addComicCmd = 'INSERT INTO BD SET collection = "'+data.collection+'", title = "'+data.title+'", number = '+number+', publishingHouse = "'+data.publishingHouse+'", dateAdd = CURRENT_TIMESTAMP(), authors = "'+data.authors+'"';
+        const collection = data.collection.toLowerCase();
+        const title = data.title.toLowerCase();
+        const publishingHouse = data.publishingHouse.toLowerCase();
+        const authors = data.authors.toLowerCase();
+        const addComicCmd = 'INSERT INTO BD SET collection = "'+collection+'", title = "'+title+'", number = '+number+', publishingHouse = "'+publishingHouse+'", dateAdd = CURRENT_TIMESTAMP(), authors = "'+authors+'"';
         connection.query(addComicCmd, function (err) {
             if(err){
                 console.log('addComic MYSQL error : ',err);
@@ -22,4 +27,6 @@ module.exports = function (socket, connection) {
             }
         });
     });
+    
+    
 };
