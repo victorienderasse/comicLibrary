@@ -1,12 +1,6 @@
 /**
  * Created by Victorien on 29-08-16.
  */
-
-var connection;
-
-module.exports = function (connect) {
-    connection = connect;
-};
     //Events-------------------------------------
 
 //Add last added to table

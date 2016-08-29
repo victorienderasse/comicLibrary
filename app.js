@@ -21,6 +21,8 @@ server.listen(port, function(){
   console.log('server running');
 });
 
+const io = require('socket.io').listen(server);
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -75,6 +77,11 @@ const connection = mysql.createConnection({
 });
 
 require('./routes/index.js')(app);
-require('./public/javascripts/library.js')(connection);
+
+io.sockets.on('connection', function(socket){
+
+  require('./public/javascripts/server.js')(socket, connection);
+
+});
 
 module.exports = app;
