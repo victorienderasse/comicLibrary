@@ -5,7 +5,7 @@
 
 socket.on('setLastComic', function (data) {
     var tb = document.getElementById('last-comic-table');
-    for(i=0,i<data.length;i++){
+    for(i=0;i<data.length;i++){
         //create elements
         var comic = document.createElement('tr');
         var collection = document.createElement('td');
