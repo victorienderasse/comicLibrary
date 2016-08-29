@@ -10,9 +10,10 @@ module.exports = function (socket, connection) {
 
 
     socket.on('addComic', function(data){
+        console.log(data.collection);
         console.log('addComic data received');
-        const addComic = 'INSERT INTO BD SET collection = '+data.collection+', title = '+data.title+', number = '+data.number+', publishingHouse = '+data.publishingHouse+', dateAdd = CURRENT_TIMESTAMP(), authors = '+data.authors;
-        connection.query(addComic, function (err) {
+        const addComicCmd = 'INSERT INTO BD SET collection = '+data.collection+', title = '+data.title+', number = '+data.number+', publishingHouse = '+data.publishingHouse+', dateAdd = CURRENT_TIMESTAMP(), authors = '+data.authors;
+        connection.query(addComicCmd, function (err) {
             if(err){
                 console.log('addComic MYSQL error : ',err);
             }else{
