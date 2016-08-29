@@ -90,6 +90,6 @@ function editComic(comicID){
 //removeComic
 function removeComic(comicID){
     console.log('remove comic function');
-    socket.emit('removeComic', comicID;
+    socket.emit('removeComic', comicID);
     window.location = 'http://192.168.1.100:8888';
 }
