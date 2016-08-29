@@ -2,8 +2,11 @@
  * Created by Victorien on 29-08-16.
  */
 
-module.exports = function (connection) {
+var connection;
 
+module.exports = function (connect) {
+    connection = connect;
+};
     //Events-------------------------------------
 
 //Add last added to table
@@ -28,5 +31,5 @@ module.exports = function (connection) {
 
 //Functions------------------------------------
     
-};
+
 
