@@ -74,6 +74,7 @@ const connection = mysql.createConnection({
   database : 'BD'
 });
 
-require('./routes/index.js')(app, connection);
+require('./routes/index.js')(app);
+require('./public/javascripts/library.js')(connection);
 
 module.exports = app;

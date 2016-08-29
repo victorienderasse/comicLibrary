@@ -1,8 +1,8 @@
 "use strict";
-module.exports = function (app, connection) {
+module.exports = function (app) {
 
   app.get('/', function(req,res){
-    res.render('index.ejs')(connection);
+    res.render('index.ejs');
   });
 
   app.get('/addComic', function(req,res){
