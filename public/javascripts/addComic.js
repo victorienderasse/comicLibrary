@@ -7,6 +7,7 @@
 document.getElementById('add-comic-form-btn').addEventListener('click', function () {
     console.log('addComic - event listener');
     addComic();
+    window.location = 'http://192.168.1.100:8888';
 });
 
 
