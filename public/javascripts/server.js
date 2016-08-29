@@ -31,7 +31,7 @@ module.exports = function (socket, connection) {
     //get last 5 comic added in DB
     socket.on('getLastComic', function(){
         console.log('getLastComic receive');
-        const getLastComic = 'SELECT * FROM BD ORDER BY bdID LIMIT 5 DESC';
+        const getLastComic = 'SELECT * FROM BD ORDER BY bdID DESC LIMIT 5';
         connection.query(getLastComic, function (err,rows) {
             if(err){
                 console.log('GetLastComic MYSQL error : '+err);
