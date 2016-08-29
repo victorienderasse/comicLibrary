@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public/javascripts', express.static(path.join(__dirname, 'public/javascripts')));
 app.use('/public/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
 app.use('/public/images', express.static(path.join(__dirname, 'public/images')));
-
+/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -62,7 +62,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
+*/
 require('./routes/index.js')(app);
 
 module.exports = app;
