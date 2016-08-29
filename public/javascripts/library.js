@@ -16,19 +16,20 @@ const connection = mysql.createConnection({
 //Add last added to table
 
 
-//action for addComic btn
+//get add Comic page
 document.getElementById('add-comic-btn').addEventListener('click', function () {
-    
+    window.location = 'http://192.168.1.100:8888/addComic';
 });
+
+//get show comic page
+document.getElementById('show-comic-btn').addEventListener('click', function () {
+    window.location = 'http://192.168.1.100:8888/showComic';
+});
+
 
 //get form to add comic
 document.getElementById('add-comic-form-btn').addEventListener('click', function () {
 
-});
-
-//action for show comic btn
-document.getElementById('show-comic-btn').addEventListener('click', function () {
-    
 });
 
 
