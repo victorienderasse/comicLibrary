@@ -8,7 +8,7 @@ socket.emit('client');
 
 //Add last added to table
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     //get add Comic page
     document.getElementById('add-comic-btn').addEventListener('click', function () {
@@ -20,7 +20,11 @@ window.onload = function () {
         window.location = 'http://192.168.1.100:8888/showComic';
     });
 
-}
+    
+});
+
+
+
 
 
 //get form to add comic
