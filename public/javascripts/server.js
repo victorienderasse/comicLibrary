@@ -14,7 +14,7 @@ module.exports = function (socket, connection) {
         const addComic = 'INSERT INTO BD SET collection = '+data.collection+', title = '+data.title+', number = '+data.number+', publishingHouse = '+data.publishingHouse+', dateAdd = CURRENT_TIMESTAMP(), authors = '+data.authors;
         connection.query(addComic, function (err) {
             if(err){
-                console.log('addComic MYSQL error : 'err);
+                console.log('addComic MYSQL error : ',err);
             }else{
                 console.log('comic added successfully');
             }
