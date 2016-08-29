@@ -2,7 +2,7 @@
  * Created by Victorien on 29-08-16.
  */
 //Connection BDD
-const mysql = require('mysql')
+const mysql = require('mysql');
 
 const connection = mysql.createConnection({
     host : '192.168.1.100',
