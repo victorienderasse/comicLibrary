@@ -3,15 +3,44 @@
   <head>
     <title>Comic Library</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
-    <h1>Bienvenue</h1>
-    <div id="lastAdd">
-      <p>Derniers ajouts : </p>
-      <p id="lastComic"></p>
-    </div>
 
-  <script src="/public/javascripts/library.js"></script>
+    <section id="header-section" class="row">
+      <div id="header-div">
+
+      </div>
+    </section>
+
+    <section id="content-section" class="row">
+      <div id="content-div">
+
+        <div class="row">
+          <div id="add-comic-div">
+            <button id="add-comic-btn">Ajouter une BD</button>
+          </div>
+          <div id="show-comic-div">
+            <button id="show-comic-btn">Voir la bibliothèque</button>
+          </div>
+        </div>
+        <div class="row">
+          <div id="last-comic-div">
+            <p><b>Derniers ajouts</b></p>
+            <table id="last-comic-table"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer-section" class="row">
+      <div id="footer-div">
+
+      </div>
+    </section>
+
+    <script src="/public/javascripts/library.js"></script>
 
   </body>
 </html>
