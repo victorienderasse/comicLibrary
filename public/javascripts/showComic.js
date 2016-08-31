@@ -43,7 +43,7 @@ document.getElementById('backBtn').addEventListener('click', function(){
 function displayAllComics(tbComic){
     var tb = document.getElementById('list-comic-tbody');
 
-    document.getElementById('nbElements').innerHTML = '-> '+tbComic.length+' élément(s)';
+    document.getElementById('nbElements').innerHTML = '<h4>-> '+tbComic.length+' élément(s)</h4>';
 
     for(i=0;i<tbComic.length;i++){
         //create elements
