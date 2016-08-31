@@ -24,6 +24,7 @@ module.exports = function (socket, connection) {
                 console.log('addComic MYSQL error : ',err);
             }else{
                 console.log('comic added successfully');
+                socket.emit('addSuccess');
             }
         });
     });

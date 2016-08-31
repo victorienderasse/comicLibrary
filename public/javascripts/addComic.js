@@ -3,6 +3,12 @@
  */
 //Events---------------------------------------
 
+socket.on('addSuccess', function(){
+    var p = document.getElementById('add-success');
+    p.innerHTML = '<h3>La bande dessinée à bien été ajoutée à la bibliothèque !</h3>';
+    p.setAttribute('style','color: green;');
+});
+
 //get form to add comic
 document.getElementById('add-comic-form-btn').addEventListener('click', function () {
     addComic();
