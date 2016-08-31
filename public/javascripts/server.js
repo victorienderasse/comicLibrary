@@ -7,7 +7,7 @@ module.exports = function (socket, connection) {
     //client connected
     socket.on('client', function () {
         console.log('client connecté');
-    })
+    });
 
     //add comic to DB
     socket.on('addComic', function(data){
@@ -59,7 +59,7 @@ module.exports = function (socket, connection) {
     //Send all comics
     socket.on('getAllComics', function () {
         const getAllComics = 'SELECT * FROM BD';
-        connection.query(getAllComics, function (res, rows) {
+        connection.query(getAllComics, function (err, rows) {
             if(err){
                 console.log('get all comics MYSQL error : '+err);
             }else{
