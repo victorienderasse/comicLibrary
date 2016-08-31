@@ -8,39 +8,42 @@
 </head>
 <body>
 
-    <section id="header-section">
+    <section id="header-section" class="row">
 
     </section>
 
-    <section id="content-section">
-        <form id="add-comic-form">
-            <div class="form-group">
-                <label for="collection" class="control-label">Collection* : </label>
-                <input type="text" name="collection" class="form-control" placeholder="le petit spirou">
-            </div>
-            <div class="form-group">
-                <label for="title" class="control-label">Titre* : </label>
-                <input type="text" name="title" class="form-control" placeholder="tout le monde te regarde">
-            </div>
-            <div class="form-group">
-                <label for="number" class="control-label">Numéro* : </label>
-                <input type="text" name="number" class="form-control" maxlength="10" size="2" placeholder="17">
-            </div>
-            <div class="form-group">
-                <label for="publishingHouse" class="control-label">Maison d'édition : </label>
-                <input type="text" name="publishingHouse" class="form-control" placeholder="dupuis">
-            </div>
-            <div class="form-group">
-                <label for="authors" class="control-label">Auteurs :</label>
-                <input type="text" name="authors" class="form-control" placeholder="tome janry">
-            </div>
-        </form>
+    <section id="content-section" class="row">
+        <div class="col-lg-offset-2 col-lg-8">
 
-        <button id="add-comic-form-btn" type="button" class="btn btn-success">Ajouter</button>
+            <form id="add-comic-form">
+                <div class="form-group">
+                    <label for="collection" class="control-label">Collection</label>
+                    <input type="text" name="collection" class="form-control" placeholder="le petit spirou">
+                </div>
+                <div class="form-group">
+                    <label for="title" class="control-label">Titre</label>
+                    <input type="text" name="title" class="form-control" placeholder="tout le monde te regarde">
+                </div>
+                <div class="form-group">
+                    <label for="number" class="control-label">Numéro</label>
+                    <input type="text" name="number" class="form-control" maxlength="10" size="2" placeholder="17">
+                </div>
+                <div class="form-group">
+                    <label for="publishingHouse" class="control-label">Maison d'édition</label>
+                    <input type="text" name="publishingHouse" class="form-control" placeholder="dupuis">
+                </div>
+                <div class="form-group">
+                    <label for="authors" class="control-label">Auteurs</label>
+                    <input type="text" name="authors" class="form-control" placeholder="tome janry">
+                </div>
+            </form>
 
+            <button id="add-comic-form-btn" type="button" class="btn btn-success">Ajouter</button>
+
+        </div>
     </section>
 
-    <section id="footer-section">
+    <section id="footer-section" class="row">
 
     </section>
 
