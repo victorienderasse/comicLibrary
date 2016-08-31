@@ -11,6 +11,11 @@ document.getElementById('add-comic-form-btn').addEventListener('click', function
 });
 
 
+document.getElementById('backBtn').addEventListener('click', function(){
+    window.location = 'http://192.168.1.100:8888/';
+});
+
+
 //Functions------------------------------------
 
 
