@@ -4,7 +4,7 @@
 //Events-----------------------------------------------------
 
 socket.on('setLastComic', function (data) {
-    var tb = document.getElementById('last-comic-table');
+    var tb = document.getElementById('last-comic-tbody');
     for(i=0;i<data.length;i++){
         //create elements
         var comic = document.createElement('tr');
