@@ -32,9 +32,7 @@ socket.emit('getAllComics');
 
 //Search button
 document.getElementById('search-btn').addEventListener('click', function () {
-    console.log('search btn');
-    var form = document.getElementById('search-form');
-    socket.emit('search',form.mySearch.value);
+    getSearch();
 });
 
 //Functions-----------------------------------------
@@ -99,4 +97,11 @@ function displayAllComics(tbComic){
         comic.appendChild(remove);
         tb.appendChild(comic);
     }
+}
+
+
+function getSearch(){
+    console.log('search btn');
+    var form = document.getElementById('search-form');
+    socket.emit('search',form.mySearch.value);
 }
