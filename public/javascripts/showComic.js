@@ -35,6 +35,10 @@ document.getElementById('search-btn').addEventListener('click', function () {
     getSearch();
 });
 
+document.getElementById('backBtn').addEventListener('click', function(){
+    window.location = 'http://192.168.1.100:8888/';
+});
+
 //Functions-----------------------------------------
 
 function displayAllComics(tbComic){
