@@ -43,6 +43,8 @@ document.getElementById('backBtn').addEventListener('click', function(){
 function displayAllComics(tbComic){
     var tb = document.getElementById('list-comic-tbody');
 
+    document.getElementById('nbElements').innerHTML = '-> '+tbComic.length+' élément(s)';
+
     for(i=0;i<tbComic.length;i++){
         //create elements
         var comic = document.createElement('tr');
