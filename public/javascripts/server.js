@@ -52,6 +52,7 @@ module.exports = function (socket, connection) {
                console.log('remove comic MYSQL error : '+err);
            }else{
                console.log('removing comic successfully');
+               socket.emit('removeComicSuccess');
            }
         });
     });

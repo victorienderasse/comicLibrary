@@ -9,19 +9,18 @@ socket.on('setAllComics', function(data){
 });
 
 socket.on('setSearch', function(data){
-    /*
-    var Tbody = document.getElementById('list-comic-tbody');
-    var tb = document.getElementById('list-comic-table');
-    tb.removeChild(Tbody);
-    var newTbody = document.createElement('tbody');
-    newTbody.id = 'list-comic-tbody';
-    tb.appendChild(newTbody);
-    */
     var tb = document.getElementById('list-comic-tbody');
     while(tb.firstChild){
         tb.removeChild(tb.firstChild);
     }
     displayAllComics(data);
+});
+
+
+socket.on('removeComicSuccess', function(){
+    var msg = document.getElementById('msg');
+    msg.innerHTML = 'La bande dessinée à bien été supprimée !';
+    msg.setAttribute('style','color:green;');
 });
 
 //Actions-------------------------------------------

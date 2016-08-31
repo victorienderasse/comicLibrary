@@ -5,7 +5,7 @@
 
 socket.on('addSuccess', function(){
     var p = document.getElementById('add-success');
-    p.innerHTML = '<h3>La bande dessinée à bien été ajoutée à la bibliothèque !</h3>';
+    p.innerHTML = '<h4>La bande dessinée à bien été ajoutée à la bibliothèque !</h4>';
     p.setAttribute('style','color: green;');
 });
 
