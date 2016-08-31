@@ -68,5 +68,19 @@ module.exports = function (socket, connection) {
             }
         });
     });
+
+
+    //Getsearch
+    socket.on('search', function(data){
+        const search = 'SELECT * FROM BD WHERE collection LIKE  "%'+data+'%" OR title LIKE  "%'+data+'%" OR publishingHouse LIKE  "%'+data+'%" OR authors LIKE  "%'+data+'%"';
+        connection.query(search, function(err,rows){
+            if(err){
+                console.log('search MYSQL error : '+err);
+            }else{
+                console.log('search ok');
+                socket.emit('setSearch',rows);
+            }
+        });
+    });
     
 };

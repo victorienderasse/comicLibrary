@@ -8,6 +8,22 @@ socket.on('setAllComics', function(data){
     displayAllComics(data);
 });
 
+socket.on('setSearch', function(data){
+    /*
+    var Tbody = document.getElementById('list-comic-tbody');
+    var tb = document.getElementById('list-comic-table');
+    tb.removeChild(Tbody);
+    var newTbody = document.createElement('tbody');
+    newTbody.id = 'list-comic-tbody';
+    tb.appendChild(newTbody);
+    */
+    var tb = document.getElementById('list-comic-tbody');
+    while(tb.firstChild){
+        tb.removeChild(tb.firstChild);
+    }
+    displayAllComics(data);
+});
+
 //Actions-------------------------------------------
 
 //Add comics
@@ -16,13 +32,15 @@ socket.emit('getAllComics');
 
 //Search button
 document.getElementById('search-btn').addEventListener('click', function () {
-   console.log('search btn');
+    console.log('search btn');
+    var form = document.getElementById('search-form');
+    socket.emit('search',form.mySearch.value);
 });
 
 //Functions-----------------------------------------
 
 function displayAllComics(tbComic){
-    var tb = document.getElementById('list-comic-table');
+    var tb = document.getElementById('list-comic-tbody');
 
     for(i=0;i<tbComic.length;i++){
         //create elements

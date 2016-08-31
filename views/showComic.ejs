@@ -17,13 +17,13 @@
     <div id="search" class="col-lg-offset-4 col-lg-4">
         <form id="search-form">
             <label for="search">Rechercher une bande dessinée : </label>
-            <input type="text" name="search" placeholder="spirou">
+            <input type="text" name="mySearch" placeholder="spirou">
             <button type="button" id="search-btn" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
         </form>
     </div>
 
     <div id="listComic" class="table-responsive col-lg-offset-2 col-lg-8">
-        <table id="list-comic-table" class="table">
+        <table id="list-comic-table" class="table-hover">
             <thead>
                 <tr>
                     <th><b>Collection</b></th>
@@ -34,6 +34,9 @@
                     <th><b>Auteurs</b></th>
                 </tr>
             </thead>
+            <tbody id="list-comic-tbody">
+
+            </tbody>
         </table>
     </div>
 
