@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter BD</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section id="header">
+
+</section>
+
+<section id="content">
+
+    <div id="search">
+        <form id="search-form">
+            <label for="search">Rechercher une bande dessinée : </label>
+            <input type="text" name="search" placeholder="spirou">
+        </form>
+        <button type="button" id="search-btn" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+    </div>
+
+    <div id="listComic">
+        <table id="list-comic-table"></table>
+    </div>
+
+</section>
+
+<section id="footer">
+
+</section>
+
+<script src="/public/javascripts/socket.io.js"></script>
+<script src="/public/javascripts/connectSocket.js"></script>
+<script src="/public/javascripts/showComic.js"></script>
+
+</body>
+</html>

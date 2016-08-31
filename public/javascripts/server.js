@@ -54,5 +54,19 @@ module.exports = function (socket, connection) {
            }
         });
     });
+
+
+    //Send all comics
+    socket.on('getAllComics', function () {
+        const getAllComics = 'SELECT * FROM BD';
+        connection.query(getAllComics, function (res, rows) {
+            if(err){
+                console.log('get all comics MYSQL error : '+err);
+            }else{
+                console.log('set all comics ok');
+                socket.emit('setAllComics',rows);
+            }
+        });
+    });
     
 };
