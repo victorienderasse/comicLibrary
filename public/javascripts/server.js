@@ -60,7 +60,7 @@ module.exports = function (socket, connection) {
 
     //Send all comics
     socket.on('getAllComics', function () {
-        const getAllComics = 'SELECT * FROM BD';
+        const getAllComics = 'SELECT * FROM BD ORDER BY collection, number';
         connection.query(getAllComics, function (err, rows) {
             if(err){
                 console.log('get all comics MYSQL error : '+err);
@@ -74,7 +74,7 @@ module.exports = function (socket, connection) {
 
     //Getsearch
     socket.on('search', function(data){
-        const search = 'SELECT * FROM BD WHERE collection LIKE  "%'+data+'%" OR title LIKE  "%'+data+'%" OR publishingHouse LIKE  "%'+data+'%" OR authors LIKE  "%'+data+'%"';
+        const search = 'SELECT * FROM BD WHERE collection LIKE  "%'+data+'%" OR title LIKE  "%'+data+'%" OR publishingHouse LIKE  "%'+data+'%" OR authors LIKE  "%'+data+'%" ORDER BY collection, number';
         connection.query(search, function(err,rows){
             if(err){
                 console.log('search MYSQL error : '+err);
