@@ -4,7 +4,7 @@
 
 //Events-------------------------------------
 var index = require('./hostconfig.js').index;
-var socket = io.connect(server);
+var socket = io.connect(index);
 
 socket.emit('client');
 
