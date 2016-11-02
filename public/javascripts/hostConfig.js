@@ -3,6 +3,6 @@
  */
 
 
-var indexURL = 'http://vps333778.ovh.net:8888/';
-var showComicURL = 'http://vps333778.ovh.net:8888/showComic';
-var addComicURL = 'http://vps333778.ovh.net:8888/addComic';
+var indexURL = 'http://victorienderasse.be:8888/';
+var showComicURL = 'http://victorienderasse.be:8888/showComic';
+var addComicURL = 'http://victorienderasse.be:8888/addComic';
