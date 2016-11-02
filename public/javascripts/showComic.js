@@ -83,7 +83,7 @@ function displayAllComics(tbComic){
 
         //set class
         editBtn.className = 'btn btn-primary btn-sm form-control';
-        removeBtn.className = 'btn btn-danger btn-sm form-control';
+        removeBtn.className = 'btn btn-close btn-sm form-control';
         editBtnIcon.className = 'glyphicon glyphicon-edit';
         removeBtnIcon.className = 'glyphicon glyphicon-remove';
 
