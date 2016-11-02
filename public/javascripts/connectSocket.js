@@ -3,7 +3,8 @@
  */
 
 //Events-------------------------------------
-var socket = io.connect('http://192.168.1.100:8888');
+var server = require('/hostconfig').server;
+var socket = io.connect(server);
 
 socket.emit('client');
 

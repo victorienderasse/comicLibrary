@@ -70,7 +70,7 @@ app.use(function(err, req, res, next) {
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host : '192.168.1.100',
+  host : 'localhost',
   user : 'root',
   password : '221193m',
   database : 'BD'
