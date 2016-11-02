@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-html {
+.full {
   background: url(../images/comicLibrary.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
