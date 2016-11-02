@@ -3,6 +3,9 @@
  */
 //Events-----------------------------------------------------
 
+var addComic = require('./hostconfig').addComic;
+var showComic = require('./hostconfig').showComic;
+
 socket.on('setLastComic', function (data) {
     var tb = document.getElementById('last-comic-tbody');
     for(i=0;i<data.length;i++){
@@ -47,12 +50,12 @@ socket.emit('getLastComic');
 
 //get add Comic page
 document.getElementById('add-comic-btn').addEventListener('click', function () {
-    window.location = 'http://192.168.1.100:8888/addComic';
+    window.location = addComic;
 });
 
 //get show comic page
 document.getElementById('show-comic-btn').addEventListener('click', function () {
-    window.location = 'http://192.168.1.100:8888/showComic';
+    window.location = showComic;
 });
 
 

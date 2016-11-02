@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-    index: 'vps333778.ovh.net:8888/',
-    showComic: 'vps333778.ovh.net:8888/showComic',
-    addComic: 'vps333778.ovh.net:8888/addComic'
+    index: 'http://vps333778.ovh.net:8888/',
+    showComic: 'http://vps333778.ovh.net:8888/showComic',
+    addComic: 'http://vps333778.ovh.net:8888/addComic'
 };

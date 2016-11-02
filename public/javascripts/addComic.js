@@ -2,6 +2,8 @@
  * Created by Victorien on 29-08-16.
  */
 //Events---------------------------------------
+var index = require('./hostconfig').index;
+var addComic = require('./hostconfig').addComic;
 
 socket.on('addSuccess', function(){
     var p = document.getElementById('add-success');
@@ -11,12 +13,12 @@ socket.on('addSuccess', function(){
 
 //get form to add comic
 document.getElementById('add-comic-form-btn').addEventListener('click', function () {
-    addComic();
+    addAComic();
 });
 
 
 document.getElementById('backBtn').addEventListener('click', function(){
-    window.location = 'http://192.168.1.100:8888/';
+    window.location = index;
 });
 
 
@@ -24,9 +26,9 @@ document.getElementById('backBtn').addEventListener('click', function(){
 
 
 
-function addComic() {
+function addAComic() {
     console.log('addComic');
     var form = document.getElementById('add-comic-form');
     socket.emit('addComic',{collection: form.collection.value, title: form.title.value, number: form.number.value, publishingHouse: form.publishingHouse.value, authors: form.authors.value});
-    window.location = 'http://192.168.1.100:8888/addComic';
+    window.location = addComic;
 }

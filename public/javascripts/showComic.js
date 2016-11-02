@@ -3,6 +3,9 @@
  */
 //Events--------------------------------------------
 
+var index = require('./hostconfig').index;
+var showComic = require('./hostconfig').showComic;
+
 socket.on('setAllComics', function(data){
     console.log('receive all comics');
     displayAllComics(data);
