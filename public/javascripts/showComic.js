@@ -43,7 +43,7 @@ document.getElementById('backBtn').addEventListener('click', function(){
 function displayAllComics(tbComic){
     var tb = document.getElementById('list-comic-tbody');
 
-    document.getElementById('nbElements').innerHTML = '<h4>-> '+tbComic.length+' élément(s)</h4>';
+    document.getElementById('nbElements').innerHTML = '<h4><span class="glyphcon glyphicon-arrow-right"></span> '+tbComic.length+' élément(s)</h4>';
 
     for(i=0;i<tbComic.length;i++){
         //create elements
@@ -83,7 +83,7 @@ function displayAllComics(tbComic){
 
         //set class
         editBtn.className = 'btn btn-primary btn-sm form-control';
-        removeBtn.className = 'btn btn-close btn-sm form-control';
+        removeBtn.className = 'btn close btn-sm form-control';
         editBtnIcon.className = 'glyphicon glyphicon-edit';
         removeBtnIcon.className = 'glyphicon glyphicon-remove';
 
