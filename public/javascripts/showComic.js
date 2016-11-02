@@ -3,9 +3,6 @@
  */
 //Events--------------------------------------------
 
-var index = require('./hostconfig').index;
-var showComic = require('./hostconfig').showComic;
-
 socket.on('setAllComics', function(data){
     console.log('receive all comics');
     displayAllComics(data);
@@ -38,7 +35,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
 });
 
 document.getElementById('backBtn').addEventListener('click', function(){
-    window.location = 'http://192.168.1.100:8888/';
+    window.location = indexURL;
 });
 
 //Functions-----------------------------------------
@@ -124,5 +121,5 @@ function editComic(comicID){
 function removeComic(comicID){
     console.log('remove comic function');
     socket.emit('removeComic', comicID);
-    window.location = 'http://192.168.1.100:8888/showComic';
+    window.location = showComicURL;
 }

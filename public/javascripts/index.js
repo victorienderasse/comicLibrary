@@ -3,8 +3,6 @@
  */
 //Events-----------------------------------------------------
 
-var addComic = require('./hostconfig').addComic;
-var showComic = require('./hostconfig').showComic;
 
 socket.on('setLastComic', function (data) {
     var tb = document.getElementById('last-comic-tbody');
@@ -50,12 +48,12 @@ socket.emit('getLastComic');
 
 //get add Comic page
 document.getElementById('add-comic-btn').addEventListener('click', function () {
-    window.location = addComic;
+    window.location = addComicURL;
 });
 
 //get show comic page
 document.getElementById('show-comic-btn').addEventListener('click', function () {
-    window.location = showComic;
+    window.location = showComicURL;
 });
 
 
